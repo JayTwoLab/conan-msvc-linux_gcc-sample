@@ -5,6 +5,20 @@
 - Windows : Visual Studio (2022), cmake, ninja
 - Linux : gcc, cmake, ninja
 
+## 프로젝트 설정
+- `conanfile.txt`
+```
+[requires]
+boost/1.84.0
+
+[options]
+boost/*:shared=False
+
+[generators]
+CMakeToolchain
+CMakeDeps
+```
+
 ## `Visual Studio 2022`
 
 코난 프로필 파일을 사전에 생성한다. 
