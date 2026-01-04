@@ -86,7 +86,7 @@ cmake -S . ^
 
 cmake --build build-msvc --config Release
 # --build build-msvc : build-msvc 경로의 것을 빌드
-# --config Release : 릴리즈로 빌드
+# --config Release : 프로필 파일(msvc_release)에 Release로 설정된 경우, 릴리즈로 빌드하여야 함.
 ```
 
 - Debug 빌드 
