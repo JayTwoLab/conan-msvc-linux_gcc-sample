@@ -37,7 +37,7 @@ cmake --build build-msvc --config Release
 # --config Release : 릴리즈로 빌드
 ```
 
-- `C:\Users\<user>\.conan2\profiles\` **`msvc_release`**
+- `C:\Users\<user>\.conan2\profiles\msvc_release`
 ```ini
 [settings]
 os=Windows
@@ -79,7 +79,7 @@ cmake -S . \
 cmake --build build-linux-gcc --config Release
 ```
 
-- `/home/<user>/.conan2/profiles/` **`linux_gcc_release`**
+- `/home/<user>/.conan2/profiles/linux_gcc_release`
 ```ini
 [settings]
 os=Linux
