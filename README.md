@@ -7,6 +7,7 @@
 
 ## `Visual Studio 2022`
 
+- Release
 ```bat
 # msvc cmd 에서 다음과 같은 명령들을 실행한다. 
 
@@ -37,6 +38,25 @@ cmake --build build-msvc --config Release
 # --config Release : 릴리즈로 빌드
 ```
 
+- Debug
+```
+cmake -E rm -rf build-msvc-debug
+
+conan install . ^
+  -pr:h %USERPROFILE%\.conan2\profiles\msvc_debug ^
+  -pr:b default ^
+  -of build-msvc-debug ^
+  --build=missing
+
+cmake -S . -B build-msvc-debug ^
+  -DCMAKE_TOOLCHAIN_FILE=build-msvc-debug\conan_toolchain.cmake ^
+  -G "Visual Studio 17 2022"
+
+cmake --build build-msvc-debug --config Debug
+```
+
+---
+
 - `C:\Users\<user>\.conan2\profiles\msvc_release`
 ```ini
 [settings]
@@ -47,6 +67,22 @@ compiler=msvc
 compiler.version=194
 compiler.runtime=dynamic
 compiler.runtime_type=Release
+compiler.cppstd=17
+
+[conf]
+tools.cmake.cmaketoolchain:generator=Ninja
+```
+
+- `C:\Users\<user>\.conan2\profiles\msvc_debug`
+```ini
+[settings]
+os=Windows
+arch=x86_64
+build_type=Debug
+compiler=msvc
+compiler.version=194
+compiler.runtime=dynamic
+compiler.runtime_type=Debug
 compiler.cppstd=17
 
 [conf]
