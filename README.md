@@ -7,7 +7,44 @@
 
 ## `Visual Studio 2022`
 
-- Release
+코난 프로필 파일을 사전에 생성한다. 
+
+- `C:\Users\<user>\.conan2\profiles\msvc_release`
+   - `<user>`는 개인 계정
+```ini
+[settings]
+os=Windows
+arch=x86_64
+build_type=Release
+compiler=msvc
+compiler.version=194
+compiler.runtime=dynamic
+compiler.runtime_type=Release
+compiler.cppstd=17
+
+[conf]
+tools.cmake.cmaketoolchain:generator=Ninja
+```
+
+- `C:\Users\<user>\.conan2\profiles\msvc_debug`
+```ini
+[settings]
+os=Windows
+arch=x86_64
+build_type=Debug
+compiler=msvc
+compiler.version=194
+compiler.runtime=dynamic
+compiler.runtime_type=Debug
+compiler.cppstd=17
+
+[conf]
+tools.cmake.cmaketoolchain:generator=Ninja
+```
+
+---
+
+- Release 빌드
 ```bat
 # msvc cmd 에서 다음과 같은 명령들을 실행한다. 
 
@@ -38,7 +75,7 @@ cmake --build build-msvc --config Release
 # --config Release : 릴리즈로 빌드
 ```
 
-- Debug
+- Debug 빌드 
 ```
 cmake -E rm -rf build-msvc-debug
 
@@ -53,40 +90,6 @@ cmake -S . -B build-msvc-debug ^
   -G "Visual Studio 17 2022"
 
 cmake --build build-msvc-debug --config Debug
-```
-
----
-
-- `C:\Users\<user>\.conan2\profiles\msvc_release`
-```ini
-[settings]
-os=Windows
-arch=x86_64
-build_type=Release
-compiler=msvc
-compiler.version=194
-compiler.runtime=dynamic
-compiler.runtime_type=Release
-compiler.cppstd=17
-
-[conf]
-tools.cmake.cmaketoolchain:generator=Ninja
-```
-
-- `C:\Users\<user>\.conan2\profiles\msvc_debug`
-```ini
-[settings]
-os=Windows
-arch=x86_64
-build_type=Debug
-compiler=msvc
-compiler.version=194
-compiler.runtime=dynamic
-compiler.runtime_type=Debug
-compiler.cppstd=17
-
-[conf]
-tools.cmake.cmaketoolchain:generator=Ninja
 ```
 
 <br />
