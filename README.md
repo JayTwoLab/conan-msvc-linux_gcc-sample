@@ -113,23 +113,23 @@ cmake --build build-msvc-debug --config Debug
 ## `Rocky Linux 8 x86_64`
 
 ```sh
-cmake -E rm -rf build-linux-gcc
+cmake -E rm -rf build-linux-gcc-release
 
 conan install . \
  -pr:h ~/.conan2/profiles/linux_gcc_release \
  -pr:b default \
- -of build-linux-gcc \
+ -of build-linux-gcc-release \
  --build=b2* \
  --build=missing
 # b2의 종속성 문제가 있을 경우를 대비하여 b2도 빌드함
 
 cmake -S . \
- -B build-linux-gcc \
+ -B build-linux-gcc-release \
  -DCMAKE_TOOLCHAIN_FILE=build-linux-gcc/conan_toolchain.cmake \
  -G "Unix Makefiles" \
  -DCMAKE_BUILD_TYPE=Release
 
-cmake --build build-linux-gcc --config Release
+cmake --build build-linux-gcc-release --config Release
 ```
 
 - `/home/<user>/.conan2/profiles/linux_gcc_release`
