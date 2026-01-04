@@ -1,6 +1,10 @@
 
 # 코난 프로젝트 빌드 명령 
 
+## 사전 설치
+- Windows : Visual Studio (2022), cmake, ninja
+- Linux : gcc, cmake, ninja
+
 ## `Visual Studio 2022`
 
 ```bat
