@@ -1,0 +1,9 @@
+[requires]
+boost/1.84.0
+
+[options]
+boost/*:shared=False
+
+[generators]
+CMakeToolchain
+CMakeDeps
