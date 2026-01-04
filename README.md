@@ -112,6 +112,21 @@ cmake --build build-msvc-debug --config Debug
 
 ## `Rocky Linux 8 x86_64`
 
+- `/home/<user>/.conan2/profiles/linux_gcc_release`
+```ini
+[settings]
+os=Linux
+arch=x86_64
+compiler=gcc
+compiler.version=8
+compiler.libcxx=libstdc++11
+build_type=Release
+
+[conf]
+tools.cmake.cmaketoolchain:generator=Ninja
+```
+
+- Release 빌드
 ```sh
 cmake -E rm -rf build-linux-gcc-release
 
@@ -132,19 +147,7 @@ cmake -S . \
 cmake --build build-linux-gcc-release --config Release
 ```
 
-- `/home/<user>/.conan2/profiles/linux_gcc_release`
-```ini
-[settings]
-os=Linux
-arch=x86_64
-compiler=gcc
-compiler.version=8
-compiler.libcxx=libstdc++11
-build_type=Release
 
-[conf]
-tools.cmake.cmaketoolchain:generator=Ninja
-```
 
 
 
