@@ -33,6 +33,22 @@ cmake --build build-msvc --config Release
 # --config Release : 릴리즈로 빌드
 ```
 
+- `C:\Users\<user>\.conan2\profiles\` **`msvc_release`**
+```
+[settings]
+os=Windows
+arch=x86_64
+build_type=Release
+compiler=msvc
+compiler.version=194
+compiler.runtime=dynamic
+compiler.runtime_type=Release
+compiler.cppstd=17
+
+[conf]
+tools.cmake.cmaketoolchain:generator=Ninja
+```
+
 <br />
 
 ---
@@ -57,6 +73,20 @@ cmake -S . \
  -DCMAKE_BUILD_TYPE=Release
 
 cmake --build build-linux-gcc --config Release
+```
+
+- `/home/<user>/.conan2/profiles/` **`linux_gcc_release`**
+```
+[settings]
+os=Linux
+arch=x86_64
+compiler=gcc
+compiler.version=8
+compiler.libcxx=libstdc++11
+build_type=Release
+
+[conf]
+tools.cmake.cmaketoolchain:generator=Ninja
 ```
 
 
