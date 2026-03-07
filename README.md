@@ -78,7 +78,7 @@ tools.cmake.cmaketoolchain:generator=Ninja
 
 ---
 
-- Release 빌드
+- `Visual Studio`인 경우 Release 빌드 절차
 ```sh
 # msvc cmd 에서 다음과 같은 명령들을 실행한다. 
 
@@ -111,7 +111,7 @@ cmake --build build-msvc-release --config Release
 
 <br />
 
-- Debug 빌드 
+- `Visual Studio`인 경우 Debug 빌드 절차
 ```sh
 cmake -E rm -rf build-msvc-debug
 
