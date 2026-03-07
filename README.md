@@ -150,7 +150,7 @@ tools.cmake.cmaketoolchain:generator=Ninja
 
 <br />
 
-- Release 빌드
+- `gcc/linux` 에서 `Release` 빌드
 ```sh
 cmake -E rm -rf build-linux-gcc-release
 
