@@ -2,14 +2,14 @@
 # 코난 프로젝트 빌드 명령 
 
 ## 사전 설치
-- `Windows` : **Visual Studio** (2022), **cmake**, **ninja**
-- `Linux` : **gcc** (g++), **cmake**, **ninja**
+- `Windows` : **Visual Studio** <sub> (2022 or higher) </sub>, **cmake**, **ninja**
+- `Linux` : **gcc** <sub> (g++) </sub>, **cmake**, **ninja**
 
 <br />
 
 ## 프로젝트 설정
 - `conanfile.txt`
-```
+```ini
 [requires]
 boost/1.84.0
 
@@ -25,7 +25,7 @@ CMakeDeps
 
 ## `Visual Studio 2022`
 
-코난 프로필 파일을 사전에 생성한다. 
+- 코난 프로필 파일을 사전에 생성한다. 
 
 - `C:\Users\<user>\.conan2\profiles\msvc_release`
    - `<user>`는 개인 계정
@@ -65,7 +65,7 @@ tools.cmake.cmaketoolchain:generator=Ninja
 ---
 
 - Release 빌드
-```bat
+```sh
 # msvc cmd 에서 다음과 같은 명령들을 실행한다. 
 
 cmake -E rm -rf build-msvc-release
@@ -98,7 +98,7 @@ cmake --build build-msvc-release --config Release
 <br />
 
 - Debug 빌드 
-```
+```sh
 cmake -E rm -rf build-msvc-debug
 
 conan install . ^
