@@ -21,14 +21,17 @@ CMakeToolchain
 CMakeDeps
 ```
 
+- 위의 경우 boost 버전 1.84.0 을 사용
+
 <br />
 
 ## `Visual Studio 2022`
 
-- 코난 프로필 파일을 사전에 생성한다. 
+- 코난 프로필 파일을 사전에 생성한다.
 
-- `C:\Users\<user>\.conan2\profiles\msvc_release`
-   - `<user>`는 개인 계정
+<br />
+
+- 릴리즈 빌드를 위한 설정 파일 생성: `C:\Users\<user>\.conan2\profiles\msvc_release` (`<user>`는 개인 계정)
 ```ini
 [settings]
 os=Windows
@@ -44,7 +47,7 @@ compiler.cppstd=17
 tools.cmake.cmaketoolchain:generator=Ninja
 ```
 
-- `C:\Users\<user>\.conan2\profiles\msvc_debug`
+- 디버깅 빌드를 위한 설정 파일 생성: `C:\Users\<user>\.conan2\profiles\msvc_debug`
 ```ini
 [settings]
 os=Windows
