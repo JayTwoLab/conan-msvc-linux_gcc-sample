@@ -47,6 +47,16 @@ compiler.cppstd=17
 tools.cmake.cmaketoolchain:generator=Ninja
 ```
 
+- Visual Studio 버전+ 제품 버전(MSVC Toolset), `Conan compiler.version`
+   - `Visual Studio 2026`, `195`
+   - `Visual Studio 2022 17.10~17.12`, `194`
+   - `Visual Studio 2022 17.0~17.9`, `193`
+   - `Visual Studio 2019`, `192`
+   - `Visual Studio 2017`, `191`
+   - `Visual Studio 2015`, `190`
+
+<br />
+
 - 디버깅 빌드를 위한 설정 파일 생성: `C:\Users\<user>\.conan2\profiles\msvc_debug`
 ```ini
 [settings]
