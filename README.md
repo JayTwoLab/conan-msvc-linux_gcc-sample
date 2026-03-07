@@ -78,7 +78,7 @@ tools.cmake.cmaketoolchain:generator=Ninja
 
 ---
 
-- `Visual Studio`인 경우 Release 빌드 절차
+- `Visual Studio`인 경우 `Release` 빌드 절차
 ```sh
 # msvc cmd 에서 다음과 같은 명령들을 실행한다. 
 
@@ -111,7 +111,7 @@ cmake --build build-msvc-release --config Release
 
 <br />
 
-- `Visual Studio`인 경우 Debug 빌드 절차
+- `Visual Studio`인 경우 `Debug` 빌드 절차
 ```sh
 cmake -E rm -rf build-msvc-debug
 
@@ -134,7 +134,7 @@ cmake --build build-msvc-debug --config Debug
 
 ## `Rocky Linux 8 x86_64`
 
-- `/home/<user>/.conan2/profiles/linux_gcc_release`
+- 릴리즈 빌드를 위한 설정 파일 생성: `/home/<user>/.conan2/profiles/linux_gcc_release`
 ```ini
 [settings]
 os=Linux
