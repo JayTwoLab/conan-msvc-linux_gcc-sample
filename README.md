@@ -1,14 +1,14 @@
 
 # 코난 프로젝트 빌드 명령 
 
-## 사전 설치
+## 사전 설치 항목
 - `Windows` : **Visual Studio** <sub> (2022 or higher) </sub>, **cmake**, **ninja**
 - `Linux` : **gcc** <sub> (g++) </sub>, **cmake**, **ninja**
 
 <br />
 
 ## 프로젝트 설정
-- `conanfile.txt`
+- `conanfile.txt` 파일 생성
 ```ini
 [requires]
 boost/1.84.0
@@ -46,14 +46,15 @@ compiler.cppstd=17
 [conf]
 tools.cmake.cmaketoolchain:generator=Ninja
 ```
-
-- Visual Studio 버전+ 제품 버전(MSVC Toolset), `Conan compiler.version`
-   - `Visual Studio 2026`, `195`
-   - `Visual Studio 2022 17.10~17.12`, `194`
-   - `Visual Studio 2022 17.0~17.9`, `193`
-   - `Visual Studio 2019`, `192`
-   - `Visual Studio 2017`, `191`
-   - `Visual Studio 2015`, `190`
+- `compiler.version`
+   - Visual Studio 버전+ 제품 버전(MSVC Toolset), `Conan compiler.version`
+      - `Visual Studio 2026`, `195`
+      - `Visual Studio 2022 17.10~`, `194`
+      - `Visual Studio 2022 17.0~17.9`, `193`
+      - `Visual Studio 2019`, `192`
+      - `Visual Studio 2017`, `191`
+      - `Visual Studio 2015`, `190`
+      - `cl` 명령을 입력하면 표시되는 버전의 상위 3자리 값: 예> 19.50.35725 이면 195 를 사용
 
 <br />
 
