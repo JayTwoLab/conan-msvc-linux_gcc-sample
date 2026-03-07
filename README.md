@@ -1,5 +1,5 @@
 
-# 코난 프로젝트 빌드 명령 
+# `Conan` 프로젝트 빌드 명령 
 
 ## 사전 설치 항목
 - `Windows` : **Visual Studio** <sub> (2022 or higher) </sub>, **cmake**, **ninja**
