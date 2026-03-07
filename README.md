@@ -2,8 +2,10 @@
 # 코난 프로젝트 빌드 명령 
 
 ## 사전 설치
-- Windows : Visual Studio (2022), cmake, ninja
-- Linux : gcc, cmake, ninja
+- `Windows` : **Visual Studio** (2022), **cmake**, **ninja**
+- `Linux` : **gcc** (g++), **cmake**, **ninja**
+
+<br />
 
 ## 프로젝트 설정
 - `conanfile.txt`
@@ -18,6 +20,8 @@ boost/*:shared=False
 CMakeToolchain
 CMakeDeps
 ```
+
+<br />
 
 ## `Visual Studio 2022`
 
@@ -56,6 +60,8 @@ compiler.cppstd=17
 tools.cmake.cmaketoolchain:generator=Ninja
 ```
 
+<br />
+
 ---
 
 - Release 빌드
@@ -88,6 +94,8 @@ cmake --build build-msvc-release --config Release
 # --build build-msvc-release : build-msvc-release 경로 빌드
 # --config Release : 프로필 파일(msvc_release)에 Release로 설정된 경우, 릴리즈로 빌드하여야 함.
 ```
+
+<br />
 
 - Debug 빌드 
 ```
@@ -125,6 +133,8 @@ build_type=Release
 [conf]
 tools.cmake.cmaketoolchain:generator=Ninja
 ```
+
+<br />
 
 - Release 빌드
 ```sh
